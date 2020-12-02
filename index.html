@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zxx">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Find House</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo/images.jpg"
+    type="images/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" id="brand" href="#"><i class="fas fa-home"></i> FindHouse</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Home1</a>
+                        <a class="dropdown-item" href="#">Home2</a>
+                        <a class="dropdown-item" href="#">Home3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Listing
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item" href="#">Listing1</a>
+                        <a class="dropdown-item" href="#">Listing2</a>
+                        <a class="dropdown-item" href="#">Listing3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Property
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="#">Property1</a>
+                        <a class="dropdown-item" href="#">Property2</a>
+                        <a class="dropdown-item" href="#">Property3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                        <a class="dropdown-item" href="#">Pages1</a>
+                        <a class="dropdown-item" href="#">Pages2</a>
+                        <a class="dropdown-item" href="#">Pages3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Blog
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                        <a class="dropdown-item" href="#">Blog1</a>
+                        <a class="dropdown-item" href="#">Blog2</a>
+                        <a class="dropdown-item" href="#">Blog3</a>
+                      
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="far fa-user"></i>Login/Register</a>
+                </li>
+                <li>
+                    <input type="button" value="+ Create Listing " id="create">
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero_section">
+        <div class="hero_text text-light text-center pt-4">
+            <h1><b>Find Your Dream Home</b></h1>
+            <p>From as low as $10 per day with limited time offer discounts.</p>
+        </div>
+        <div class="information">
+            <div class="buttons text-center mb-2">
+                <input type="button" class="btn btn-primary btn11" value="Buy" id="btn1">
+                <input type="button" class="btn btn-primary btn12" value="Rent" id="btn2">
+            </div>
+            <div class="container-fluid">
+                <div class="row  bg-light" id="topinfo">
+                    <div class="form-group">
+                        <input type="text" class="form-control keyword" id="formtext" placeholder="Enter Keyword..">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="property" class="btn btn-light dropdown-toggle border"
+                            data-toggle="dropdown">Property Type</button>
+
+                        <div class="dropdown-menu">
+                            <a href="" class="dropdown-item">1 BHK</a>
+                            <a href="" class="dropdown-item">2 BHK</a>
+                            <a href="" class="dropdown-item">3 BHK</a>
+                        </div>
+                    </div>
+                    <div class="location form-group">
+                        <ul>
+                            <li>
+                                <input type="text" class="form-control location" id="formtext1" placeholder="Location">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group" id="forprice">
+                        <button type="button" id="price" class="btn btn-light  dropdown-toggle border "
+                            data-toggle="dropdown">Price</button>
+
+                        <div class="dropdown-menu">
+                            <a href="" class="dropdown-item">Low Range</a>
+                            <a href="" class="dropdown-item">Mid Range</a>
+                            <a href="" class="dropdown-item">High Range</a>
+                        </div>
+                    </div>
+                    <div class="form-group advance">
+                        <input type="text" class="form-control advance" id="formtext2" placeholder="Advanced"><i
+                            class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="search">Search</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid featured mb-5 pt-4 pb-5" id="featured1">
+        <div class="properties text-center my-5">
+            <h3>Featured Properties</h3>
+            <p>Handpicked properties by our team</p>
+        </div>
+        <div class="container-fluid" id="contents">
+            <div class="row owl-carousel owl-theme" id="card1">
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                       <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card col-lg-3 mt-2 pt-3 forcard1">
+                    <img class="image1" src="images/bed-1839184_1920.jpg" alt="">
+                    <span class="rentfeature">
+                        <button type="button" class="renting">For Rent</button>
+                    </span>
+                    <p class="costing"><span>$13,000</span>/mo</p>
+                    <span class="exchange"> <a href=""><i class="fas fa-exchange-alt"></i></a>
+                        <a href=""><i class="far fa-heart"></i></a></span>
+                    <span class="apart pt-2">Apartment</span>
+                    <p class="reno ml-0">Renovated Apartment</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                    <p class="beds"><span>Beds:4</span><span>Baths:2</span><span>Sq Ft:5280</span></p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project text-center">
+        <div class="ourProject py-3">
+            <h2>Find Properties in These Cities</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="container-fluid">
+            <div class="row text-center project">
+                <div class="col-lg-4 col-md-6 imgColumn pt-4" id="imgColumn1">
+                    <img src="images/miami-beach-674068_1280.jpg" alt="">
+                    <div class="texts">
+                        <h5>Miami</h5>
+                        <p>24 Properties</p>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6 imgColumn pt-4" id="imgColumn2">
+                    <img src="images/los-angeles-1598750_1920.jpg" alt="">
+                    <div class="texts">
+                        <h5>Los Angeles</h5>
+                        <p>18 Properties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row text-center project">
+                <div class="col-lg-8 col-md-6 imgColumn pt-4" id="imgColumn3">
+                    <img src="images/new-york-690214_1920.jpg" alt="">
+                    <div class="texts">
+                        <h5>New York</h5>
+                        <p>89 Properties</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 imgColumn pt-4" id="imgColumn4">
+                    <img src="images/beach-landscape-sea-coast-water-ocean-653892-pxhere.com_.jpg" alt="">
+                    <div class="texts">
+                        <h5>Floria</h5>
+                        <p>47 Properties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services text-center mt-4">
+        <div class="corporate pt-5">
+            <h3>Why Choose US</h3>
+            <p>We provide full service at every step</p>
+        </div>
+        <div class="container-fluid">
+            <div class="row text-center mt-5 pb-5 icongroup">
+                <div class="col-lg-3 col-md-7 col-sm-11 myColumn my-3" id="thousands">
+                    <span><img src="images/icons/high-five.png" style="height: 50px; width: 50px;" alt=""></span>
+                    <h5><b>Trusted By Thousands</b></h5>
+                    <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet
+                        consectetur
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-7 col-sm-11 myColumn my-3" id="properties">
+                    <span><img src="images/icons/home.png" style="height: 50px; width: 50px;" alt=""></span>
+                    <h5><b>Trusted By Thousands</b></h5>
+                    <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet
+                        consectetur
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-7  col-sm-11 myColumn my-3" id="financing">
+                    <span><img src="images/icons/budget.png" style="height: 50px; width: 50px;" alt=""></span>
+                    <h5><b>Trusted By Thousands</b></h5>
+                    <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet
+                        consectetur
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" owl-carousel owl-theme" id="card2">
+        <figure class="profile text-center text-light">
+            <h2 class="pt-5"><b>Testimonials</b></h2>
+            <p class="pb-5">Here could be a nice sub title.</p>
+            <img src="images/original.png" class="figure-img" alt="...">
+            <figcaption class="figure-caption figcaptions">
+                <h5 class="pt-4">Augusta Silva</h5>
+                <p>Sales Manager</p>
+                <p class="py-2 pb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam deserunt
+                    dignissimos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat labore soluta laboriosam quos culpa corrupti dolorum vitae eius. Veritatis, dolore.</p>
+            </figcaption>
+        </figure>
+        <figure class="profile text-center text-light">
+            <h2 class="pt-5"><b>Testimonials</b></h2>
+            <p class="pb-5">Here could be a nice sub title.</p>
+            <img src="images/original.png" class="figure-img" alt="...">
+            <figcaption class="figure-caption figcaptions">
+                <h5 class="pt-4">Augusta Silva</h5>
+                <p>Sales Manager</p>
+                <p class="py-2 pb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam deserunt
+                    dignissimos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat labore soluta laboriosam quos culpa corrupti dolorum vitae eius. Veritatis, dolore.</p>
+            </figcaption>
+        </figure>
+        <figure class="profile text-center text-light">
+            <h2 class="pt-5"><b>Testimonials</b></h2>
+            <p class="pb-5">Here could be a nice sub title.</p>
+            <img src="images/original.png" class="figure-img" alt="...">
+            <figcaption class="figure-caption figcaptions">
+                <h5 class="pt-4">Augusta Silva</h5>
+                <p>Sales Manager</p>
+                <p class="py-2 pb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam deserunt
+                    dignissimos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat labore soluta laboriosam quos culpa corrupti dolorum vitae eius. Veritatis, dolore.</p>
+            </figcaption>
+        </figure>
+        <figure class="profile text-center text-light">
+            <h2 class="pt-5"><b>Testimonials</b></h2>
+            <p class="pb-5">Here could be a nice sub title.</p>
+            <img src="images/original.png" class="figure-img" alt="...">
+            <figcaption class="figure-caption figcaptions">
+                <h5 class="pt-4">Augusta Silva</h5>
+                <p>Sales Manager</p>
+                <p class="py-2 pb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam deserunt
+                    dignissimos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat labore soluta laboriosam quos culpa corrupti dolorum vitae eius. Veritatis, dolore.</p>
+            </figcaption>
+        </figure>
+        <figure class="profile text-center text-light">
+            <h2 class="pt-5"><b>Testimonials</b></h2>
+            <p class="pb-5">Here could be a nice sub title.</p>
+            <img src="images/original.png" class="figure-img" alt="...">
+            <figcaption class="figure-caption figcaptions">
+                <h5 class="pt-4">Augusta Silva</h5>
+                <p>Sales Manager</p>
+                <p class="py-2 pb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam deserunt
+                    dignissimos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat labore soluta laboriosam quos culpa corrupti dolorum vitae eius. Veritatis, dolore.</p>
+            </figcaption>
+        </figure>
+        <figure class="profile text-center text-light">
+            <h2 class="pt-5"><b>Testimonials</b></h2>
+            <p class="pb-5">Here could be a nice sub title.</p>
+            <img src="images/original.png" class="figure-img" alt="...">
+            <figcaption class="figure-caption figcaptions">
+                <h5 class="pt-4">Augusta Silva</h5>
+                <p>Sales Manager</p>
+                <p class="py-2 pb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam deserunt
+                    dignissimos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat labore soluta laboriosam quos culpa corrupti dolorum vitae eius. Veritatis, dolore.</p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <div class="articles mb-5 mt-4 pt-3 pb-5">
+        <div class="tips text-center">
+            <h3>Articles & Tips</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="container-fluid">
+            <div class="row text-left">
+                <div class="card articletips col-lg-3 col-md-5 col-sm-10 mt-4 pt-3">
+                    <img class="imagesec2" src="images/entrepreneur-593362_1920.jpg" alt="">
+                    <span class="business pt-2">Business</span>
+                    <p>Skills You Can Learn In Estate Market</p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                           <li><img class="logoimage" src="images/logo.png" alt=""></li> 
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card  articletips col-lg-3 col-md-5 col-sm-10 mt-4 pt-3" id="card21">
+                    <img class="imagesec2" src="images/kitchen-1940174_1920.jpg" alt="">
+                    <span class="business pt-2">Business</span>
+                    <p class="ml-0">Bedroom Colors You Will Never Regret</p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card  articletips col-lg-3 col-md-5 col-sm-10 mt-4 pt-3" id="cardlast">
+                    <img class="imagesec2" src="images/log-cabin-1886620_1280.jpg" alt="">
+                    <span class="business pt-2">Business</span>
+                    <p>5 Steps For Buying An Investment</p>
+                    <hr>
+                    <div class="card-body cardbody1">
+                        <ul>
+                            <li><img class="logoimage" src="images/logo.png" alt=""></li>
+                            <li class="ali">Ali Tufan</li>
+                            <li>4 years ago</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our partners">
+        <div class="partners text-center">
+            <h3><b>Our Partners</b></h3>
+            <p>We only work with the best companies around the world</p>
+        </div>
+        <div class="container-fluid">
+            <div class="partners_logos row my-4">
+                <div class="logo col-md-2 col-sm-11 text-center">
+                    <img src="images/estate1.jpg" style="height: 130px; width: 130px;" alt="">
+                </div>
+                <div class="logo col-md-2 col-sm-11 text-center">
+                    <img src="images/estate2.gif" style="height: 130px; width: 130px;" alt="">
+                </div>
+                <div class="logo col-md-2 col-sm-11 text-center">
+                    <img src="images/estate3.jpg" style="height: 130px; width: 130px;" alt="">
+                </div>
+                <div class="logo col-md-2 col-sm-11 text-center">
+                    <img src="images/estate4.jpg" style="height: 130px; width: 130px;" alt="">
+                </div>
+                <div class="logo col-md-2 col-sm-11 text-center">
+                    <img src="images/estate5.png" style="height: 130px; width: 130px;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="agent py-4">
+        <div class="real text-light pt-4" id="real1">
+            <h3>Become a Real Estate Agent</h3>
+            <p>We only work with the best companies around the world</p>
+
+        </div>
+        <input type="button" id="register1" class=" btn btn-primary register mb-4" value="Register Now">
+    </div>
+
+    <div class="black py-5" id="black">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-5">
+                    <h5 class="text-white pb-3">About Site</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ad facere, possimus sint enim
+                        vitae optio eveniet sed beatae cumque?</p>
+                </div>
+                <div class="col-lg-3 quick col-md-5">
+                    <h5 class="text-white pb-2">Quick Links</h5>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">User's Guide</a></li>
+                        <li><a href="">Support Center</a></li>
+                        <li><a href="">Press Info</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 us col-md-5">
+                    <h5 class="text-white pb-2">Contact Us</h5>
+                    <ul>
+                        <li><a href="">shubhamp11@gmail.com</a></li>
+                        <li><a href="">Collins Street West,Victoria</a></li>
+                        <li><a href="">8007,Australia.</a></li>
+                        <li><a href="">+91 9767592182</a></li>
+                        <li><a href="">+91 9767592182</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-5">
+                    <h5 class="text-white pb-2">Follow Us</h5>
+                    <div class="follow">
+                        <ul>
+                            <li>
+                                <a class="pr-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="pr-3" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="pr-3" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="pr-3" href=""><i class="fab fa-pinterest"></i></a>
+                                <a class="pr-3" href=""><i class="fab fa-google"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subscribe">
+                        <h5 class="text-white  pb-2">Subscribe</h5>
+                        <input type="text" placeholder="your email" id="name">
+                        <a href="" id="arrow"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="text-center row">
+                <div class="home pt-4 col-sm-12 col-lg-6" id="home1">
+                    <ul>
+                        <li>
+                            <span><a href="">Home</a></span>
+                            <span><a href="">Listing</a></span>
+                            <span><a href="">Property</a></span>
+                            <span><a href="">Pages</a></span>
+                            <span><a href="">Blog</a></span>
+                            <span><a href="">Contact</a></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copy pb-3 col-sm-12 col-lg-6" id="copy1">
+                    <p>&copy; 2020 Shubham M Phadtare</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+<script src="js/owl.carousel.js.js"></script>
+
+<script>
+    $(function () {
+
+        $('#card1').owlCarousel({
+            items: 12,
+            // autoplay: true,
+            smartSpeed: 700,
+            loop: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                }
+            }
+        });
+        $('#card2').owlCarousel({
+            items: 12,
+            // autoplay: true,
+            smartSpeed: 700,
+            loop: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                992: {
+                    items: 1
+                }
+            }
+        });
+    });
+</script>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+</body>
+
+
+</html>
